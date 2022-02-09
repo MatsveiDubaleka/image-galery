@@ -11,13 +11,14 @@ body {
 }
 
 .wrapper {
+    height: 100vh;
     display: flex;
     flex-direction:column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 header, footer {
-    padding:1% 5%;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -25,6 +26,9 @@ header, footer {
     background-color: blanchedalmond;
 }
 
+header, main, footer {
+    padding:0% 5%;
+}
 /* Footer */
 
 .rsschool {

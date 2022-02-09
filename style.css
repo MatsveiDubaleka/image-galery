@@ -11,17 +11,18 @@ body {
 }
 
 .wrapper {
-    padding:0 5%;
     display: flex;
     flex-direction:column;
     justify-content: center;
 }
 
 header, footer {
+    padding:1% 5%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-color: blanchedalmond;
 }
 
 /* Footer */

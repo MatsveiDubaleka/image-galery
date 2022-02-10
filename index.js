@@ -1,14 +1,20 @@
-const url = 'https://api.unsplash.com/photos/random?query=spring&client_id=VPEGnAwflLlSf991g0qx9sRLUjQ-s9VWHXXNvoSfE4E';
+const url = 'https://api.unsplash.com/search/photos?query=spring&client_id=VPEGnAwflLlSf991g0qx9sRLUjQ-s9VWHXXNvoSfE4E';
+const galleryContainer = document.querySelector('.gallery-container')
 
 async function getData() {
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data)
-    console.log(data.urls.regular);
     showData(data);
 }
 getData();
 
-// function showData(data) {
-//     data.
-// }
+function showData(data) {
+    data.results.map((elem) => {
+        let imageSrc = elem.urls.regular;
+        const img = document.createElement('img');
+        img.classList.add('gallery-img')
+        img.src = `${imageSrc}`;
+        img.alt = `image`;
+        galleryContainer.append(img);
+    })
+}

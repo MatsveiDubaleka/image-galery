@@ -1,4 +1,4 @@
-const url = 'https://api.unsplash.com/search/photos?query=spring&client_id=VPEGnAwflLlSf991g0qx9sRLUjQ-s9VWHXXNvoSfE4E';
+const url = 'https://api.unsplash.com/search/photos?query=spring&orientation=landscape&extras=url_m&client_id=VPEGnAwflLlSf991g0qx9sRLUjQ-s9VWHXXNvoSfE4E';
 const galleryContainer = document.querySelector('.gallery-container')
 
 async function getData() {

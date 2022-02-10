@@ -11,6 +11,7 @@ let img;
 input.addEventListener('change', () => {
     // Создаём шаблонную строку для API, для того чтобы получать те картинки, которые ввёл пользователь в поле поиска.
     url = `https://api.unsplash.com/search/photos?query=${input.value}&orientation=landscape&extras=url_m&client_id=VPEGnAwflLlSf991g0qx9sRLUjQ-s9VWHXXNvoSfE4E`;
+
     getData()
 })
 // Обработка запроса
@@ -23,6 +24,7 @@ getData()
 
 // Пишем отдельную функцию для отображения полученных от API данных на странице
 function showData(data) {
+    
     // Убираем всех дочерные элементы(картинки) у контейнера для картинок
     while (galleryContainer.firstChild) {
         galleryContainer.removeChild(galleryContainer.firstChild)
